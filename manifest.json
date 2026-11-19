@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "codex",
+  "name": "Arrumo Codex Plugin",
+  "description": "The Codex agent adapter for planning, executing, and reporting on Arrumo video jobs.",
+  "capabilities": {
+    "agents": {
+      "name": "Agent adapter",
+      "description": "Plan and execute editing jobs and report progress."
+    }
+  }
+}
