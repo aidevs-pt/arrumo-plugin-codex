@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 7,
   "id": "codex",
   "name": "Codex",
   "description": "Uses your ChatGPT plan. Codex can also generate images, so you need one key fewer.",
@@ -21,7 +21,32 @@
       "authStatusArgs": [
         "login",
         "status"
-      ]
+      ],
+      "structuredRun": {
+        "args": [
+          "exec",
+          "--ignore-user-config",
+          "--ignore-rules",
+          "--ephemeral",
+          "--skip-git-repo-check",
+          "--sandbox",
+          "read-only",
+          "--disable",
+          "shell_tool",
+          "--disable",
+          "plugins",
+          "-c",
+          "web_search=\"disabled\"",
+          "--output-schema",
+          "{schemaPath}",
+          "--output-last-message",
+          "{outputPath}",
+          "-"
+        ],
+        "result": {
+          "source": "outputFile"
+        }
+      }
     }
   }
 }
