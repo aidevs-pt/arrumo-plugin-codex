@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "codex",
-  "name": "Arrumo Codex Plugin",
+  "name": "Codex",
   "description": "Uses your ChatGPT plan. Codex can also generate images, so you need one key fewer.",
   "capabilities": {
     "agents": {
