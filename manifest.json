@@ -7,6 +7,10 @@
     "agents": {
       "name": "Agent adapter",
       "description": "Plan and execute editing jobs and report progress."
+    },
+    "subtitle-translation": {
+      "name": "Subtitle translation",
+      "description": "Translate timed subtitle cues to a selected language."
     }
   },
   "agentProvider": {
