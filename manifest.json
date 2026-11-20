@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "codex",
   "name": "Arrumo Codex Plugin",
-  "description": "The Codex agent adapter for planning, executing, and reporting on Arrumo video jobs.",
+  "description": "Uses your ChatGPT plan. Codex can also generate images, so you need one key fewer.",
   "capabilities": {
     "agents": {
       "name": "Agent adapter",
