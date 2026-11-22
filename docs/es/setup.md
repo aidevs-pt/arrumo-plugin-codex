@@ -19,3 +19,7 @@ El estado confirmed indica que la CLI aceptó la comprobación. Si Arrumo devuel
 ## Traduce los subtítulos
 
 Consulta [la traducción de subtítulos](../../README.md#translate-subtitles) para usar este plugin como traductor de Auto-Dubbing. El traductor envía a Codex el texto de los subtítulos seleccionados y el idioma de destino. El proceso conserva las marcas de tiempo originales.
+
+## Crea imágenes
+
+Codex puede crear miniaturas y otras imágenes con su herramienta de imágenes integrada, con tu plan de ChatGPT, así que no necesitas una clave de OpenAI o Gemini para ellas. Aparece en **Generación de imágenes**, en Ajustes, Servicios y claves, en primer lugar de forma predeterminada; bájalo para preferir un proveedor con clave. Arrumo envía la descripción de la imagen y hasta ocho referencias de estilo. Codex trabaja en solo lectura, y Arrumo recoge, comprueba y recorta la imagen, y después borra la copia de Codex.

@@ -11,6 +11,10 @@
     "subtitle-translation": {
       "name": "Subtitle translation",
       "description": "Translate timed subtitle cues to a selected language."
+    },
+    "image-generation": {
+      "name": "Image generation",
+      "description": "Make thumbnails and other images with Codex's built-in image tool, on your ChatGPT plan."
     }
   },
   "agentProvider": {
@@ -94,6 +98,29 @@
         ],
         "result": {
           "source": "outputFile"
+        }
+      },
+      "imageRun": {
+        "args": [
+          "exec",
+          "--ignore-rules",
+          "--ephemeral",
+          "--skip-git-repo-check",
+          "--sandbox",
+          "read-only",
+          "--disable",
+          "shell_tool",
+          "--enable",
+          "image_generation",
+          "{images}",
+          "--json",
+          "-"
+        ],
+        "sessionPointer": "/thread_id",
+        "outputDirectory": {
+          "env": "CODEX_HOME",
+          "fallback": ".codex",
+          "path": "generated_images/{session}"
         }
       }
     }
