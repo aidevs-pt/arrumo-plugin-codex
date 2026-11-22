@@ -25,7 +25,6 @@
       "structuredRun": {
         "args": [
           "exec",
-          "--ignore-user-config",
           "--ignore-rules",
           "--ephemeral",
           "--skip-git-repo-check",
@@ -33,20 +32,97 @@
           "read-only",
           "--disable",
           "shell_tool",
-          "--disable",
-          "plugins",
-          "-c",
-          "web_search=\"disabled\"",
+          "{settings}",
           "--output-schema",
           "{schemaPath}",
           "--output-last-message",
           "{outputPath}",
           "-"
         ],
+        "settingArgs": [
+          {
+            "setting": "web-search",
+            "args": [
+              "-c",
+              "web_search=\"live\""
+            ],
+            "otherwise": [
+              "-c",
+              "web_search=\"disabled\""
+            ]
+          },
+          {
+            "setting": "model",
+            "args": [
+              "-m",
+              "{value}"
+            ]
+          },
+          {
+            "setting": "reasoning-effort",
+            "args": [
+              "-c",
+              "model_reasoning_effort=\"{value}\""
+            ]
+          },
+          {
+            "setting": "installed-plugins",
+            "args": [],
+            "otherwise": [
+              "--ignore-user-config",
+              "--disable",
+              "plugins"
+            ]
+          }
+        ],
         "result": {
           "source": "outputFile"
         }
       }
     }
-  }
+  },
+  "settings": [
+    {
+      "id": "web-search",
+      "label": "Web search",
+      "description": "Lets the agent search the web while it works, for facts, prices and trends. It stays read-only and cannot run commands.",
+      "kind": "boolean",
+      "scope": "workspace",
+      "required": false,
+      "default": false
+    },
+    {
+      "id": "model",
+      "label": "Model",
+      "description": "The Codex model for this workspace's agent work. Leave empty to use Codex's default.",
+      "kind": "string",
+      "scope": "workspace",
+      "required": false
+    },
+    {
+      "id": "reasoning-effort",
+      "label": "Reasoning effort",
+      "description": "How long the agent thinks before answering. Higher effort gives better scripts and edits but takes longer.",
+      "kind": "string",
+      "scope": "workspace",
+      "required": false,
+      "choices": [
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh"
+      ],
+      "default": "medium"
+    },
+    {
+      "id": "installed-plugins",
+      "label": "Use my installed plugins",
+      "description": "Lets the agent use your own Codex configuration, plugins and tool servers. They can see the workspace material the agent is given, so turn this on only for ones you trust.",
+      "kind": "boolean",
+      "scope": "workspace",
+      "required": false,
+      "default": false
+    }
+  ]
 }
