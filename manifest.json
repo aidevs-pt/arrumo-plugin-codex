@@ -32,6 +32,8 @@
           "read-only",
           "--disable",
           "shell_tool",
+          "-c",
+          "model_reasoning_summary=\"auto\"",
           "{settings}",
           "--output-schema",
           "{schemaPath}",
@@ -73,6 +75,16 @@
               "--disable",
               "plugins"
             ]
+          }
+        ],
+        "progress": [
+          {
+            "pattern": "^web search: (\\S.*)$",
+            "kind": "search"
+          },
+          {
+            "pattern": "^\\*\\*(.+)\\*\\*$",
+            "kind": "thinking"
           }
         ],
         "result": {
