@@ -8,7 +8,7 @@ Elige Codex al configurar el espacio de trabajo o selecciónalo como agente de p
 
 ## Comprueba la conexión
 
-Desde la CLI del editor, indica la ruta de una base de datos local y el identificador de este plugin.
+Desde la CLI del editor, indica la ruta de una base de datos local y el identificador de este complemento.
 
 ```sh
 arrumo-workspaces ./workspaces.sqlite agent-login-status codex
@@ -18,7 +18,7 @@ El estado confirmed indica que la CLI aceptó la comprobación. Si Arrumo devuel
 
 ## Traduce los subtítulos
 
-Consulta [la traducción de subtítulos](../../README.md#translate-subtitles) para usar este plugin como traductor de Auto-Dubbing. El traductor envía a Codex el texto de los subtítulos seleccionados y el idioma de destino. El proceso conserva las marcas de tiempo originales.
+Consulta [la traducción de subtítulos](../../README.md#translate-subtitles) para usar este complemento como traductor de Auto-Dubbing. El traductor envía a Codex el texto de los subtítulos seleccionados y el idioma de destino. El proceso conserva las marcas de tiempo originales.
 
 ## Crea imágenes
 

@@ -209,5 +209,105 @@
       "es": "Codex redacta guiones, planifica recursos y traduce subtítulos con tu plan de ChatGPT. También crea miniaturas e imágenes con tu estilo, así necesitas una clave menos.",
       "pt": "O Codex escreve guiões, planeia recursos e traduz legendas com o teu plano ChatGPT. Também cria miniaturas e imagens no teu estilo, por isso precisas de uma chave a menos."
     }
+  },
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\"><rect width=\"32\" height=\"32\" rx=\"8\" fill=\"#111827\"/><path d=\"M9 11l5 5-5 5\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17 21h7\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+  "translations": {
+    "en": {
+      "settings": {
+        "reasoning-effort": {
+          "choices": {
+            "minimal": "Minimal",
+            "low": "Low",
+            "medium": "Medium",
+            "high": "High",
+            "xhigh": "Extra high"
+          }
+        }
+      }
+    },
+    "es": {
+      "description": "Usa tu plan de ChatGPT. Codex también genera imágenes, así necesitas una clave menos.",
+      "capabilities": {
+        "agents": {
+          "name": "Adaptador de agente",
+          "description": "Planifica y ejecuta trabajos de edición e informa del progreso."
+        },
+        "subtitle-translation": {
+          "name": "Traducción de subtítulos",
+          "description": "Traduce los subtítulos con sus tiempos al idioma elegido."
+        },
+        "image-generation": {
+          "name": "Generación de imágenes",
+          "description": "Crea miniaturas y otras imágenes con la herramienta de imágenes de Codex, con tu plan de ChatGPT."
+        }
+      },
+      "settings": {
+        "web-search": {
+          "label": "Búsqueda web",
+          "description": "Permite que el agente busque en la web mientras trabaja: datos, precios y tendencias. Sigue en solo lectura y no puede ejecutar comandos."
+        },
+        "model": {
+          "label": "Modelo",
+          "description": "El modelo de Codex para el trabajo del agente en este espacio. Déjalo vacío para usar el predeterminado de Codex."
+        },
+        "reasoning-effort": {
+          "label": "Esfuerzo de razonamiento",
+          "description": "Cuánto piensa el agente antes de responder. Más esfuerzo da mejores guiones y ediciones, pero tarda más.",
+          "choices": {
+            "minimal": "Mínimo",
+            "low": "Bajo",
+            "medium": "Medio",
+            "high": "Alto",
+            "xhigh": "Muy alto"
+          }
+        },
+        "installed-plugins": {
+          "label": "Usar mis complementos instalados",
+          "description": "Permite que el agente use tu propia configuración de Codex, sus complementos y servidores de herramientas. Pueden ver el material que recibe el agente, así que actívalo solo si confías en ellos."
+        }
+      }
+    },
+    "pt": {
+      "description": "Usa o teu plano ChatGPT. O Codex também gera imagens, por isso precisas de uma chave a menos.",
+      "capabilities": {
+        "agents": {
+          "name": "Adaptador de agente",
+          "description": "Planeia e executa trabalhos de edição e reporta o progresso."
+        },
+        "subtitle-translation": {
+          "name": "Tradução de legendas",
+          "description": "Traduz as legendas com os seus tempos para a língua escolhida."
+        },
+        "image-generation": {
+          "name": "Geração de imagens",
+          "description": "Cria miniaturas e outras imagens com a ferramenta de imagens do Codex, no teu plano ChatGPT."
+        }
+      },
+      "settings": {
+        "web-search": {
+          "label": "Pesquisa na web",
+          "description": "Deixa o agente pesquisar na web enquanto trabalha: factos, preços e tendências. Continua só em leitura e não pode executar comandos."
+        },
+        "model": {
+          "label": "Modelo",
+          "description": "O modelo Codex para o trabalho do agente neste espaço. Deixa vazio para usar o predefinido do Codex."
+        },
+        "reasoning-effort": {
+          "label": "Esforço de raciocínio",
+          "description": "Quanto tempo o agente pensa antes de responder. Mais esforço dá melhores guiões e edições, mas demora mais.",
+          "choices": {
+            "minimal": "Mínimo",
+            "low": "Baixo",
+            "medium": "Médio",
+            "high": "Alto",
+            "xhigh": "Muito alto"
+          }
+        },
+        "installed-plugins": {
+          "label": "Usar os meus plugins instalados",
+          "description": "Deixa o agente usar a tua própria configuração do Codex, os seus plugins e servidores de ferramentas. Podem ver o material que o agente recebe, por isso ativa só se confiares neles."
+        }
+      }
+    }
   }
 }
