@@ -217,7 +217,6 @@
     }
   },
   "icon": "icon.svg",
-  "iconNotice": "Codex, OpenAI and the OpenAI logo are trademarks of OpenAI.",
   "translations": {
     "en": {
       "settings": {
@@ -272,8 +271,7 @@
           "label": "Usar mis complementos instalados",
           "description": "Permite que el agente use tu propia configuración de Codex, sus complementos y servidores de herramientas. Pueden ver el material que recibe el agente, así que actívalo solo si confías en ellos."
         }
-      },
-      "iconNotice": "Codex, OpenAI y el logotipo de OpenAI son marcas de OpenAI."
+      }
     },
     "pt": {
       "description": "Usa o teu plano ChatGPT. O Codex também gera imagens, por isso precisas de uma chave a menos.",
@@ -315,8 +313,7 @@
           "label": "Usar os meus plugins instalados",
           "description": "Deixa o agente usar a tua própria configuração do Codex, os seus plugins e servidores de ferramentas. Podem ver o material que o agente recebe, por isso ativa só se confiares neles."
         }
-      },
-      "iconNotice": "Codex, OpenAI e o logótipo da OpenAI são marcas da OpenAI."
+      }
     }
   }
 }

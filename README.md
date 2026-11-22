@@ -4,15 +4,11 @@ The Codex agent adapter for planning, executing, and reporting on Arrumo video j
 
 ## Icon and trademarks
 
-`icon.svg` uses the official Codex mark, only to identify the service this
-plugin connects to. Codex, OpenAI and the OpenAI logo are trademarks of OpenAI. This plugin is not affiliated with or endorsed by
-OpenAI, and the mark is not covered by this repository's license.
-
-Copyright © 2026 DEVS AI Unipessoal LDA. Licensed under the [GNU Affero General Public License v3.0](LICENSE).
-
-For custom AI solutions for your company, visit [DEVS AI](https://aidevs.pt).
-
-The manifest declares the provider label, setup guide, and local authentication status command through the Arrumo Plugin SDK. The plugin ID is `codex`.
+`icon.svg` is a generic symbol drawn for Arrumo (a terminal prompt, for an agent that works from the command line), covered by this repository's
+license. It is not the provider's logo: the provider has not published permission for its
+logo to appear in another app's interface, so the plugin does not use it. The name is used
+only to say which service the plugin connects to; this plugin is not affiliated with or
+endorsed by the provider.
 
 ## Setup guide
 
