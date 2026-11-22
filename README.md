@@ -8,7 +8,7 @@ The Codex agent adapter for planning, executing, and reporting on Arrumo video j
 
 ## Setup guide
 
-[English](docs/en/setup.md) · [Español](docs/es/setup.md) · [Português](docs/pt/setup.md)
+[English](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/en/plugins/codex/setup.md) · [Español](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/es/plugins/codex/setup.md) · [Português](https://github.com/aidevs-pt/arrumo-docs/blob/main/content/docs/pt/plugins/codex/setup.md)
 
 ## Translate subtitles
 
