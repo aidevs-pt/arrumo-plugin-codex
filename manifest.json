@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 7,
+  "schemaVersion": 8,
   "id": "codex",
   "name": "Codex",
   "description": "Uses your ChatGPT plan. Codex can also generate images, so you need one key fewer.",
@@ -197,5 +197,17 @@
       "required": false,
       "default": false
     }
-  ]
+  ],
+  "introduction": {
+    "headline": {
+      "en": "Codex writes, and draws too",
+      "es": "Codex escribe, y también dibuja",
+      "pt": "O Codex escreve, e também desenha"
+    },
+    "body": {
+      "en": "Codex drafts scripts, plans assets and translates subtitles with your ChatGPT plan. It also makes thumbnails and images in your style, so you need one key fewer.",
+      "es": "Codex redacta guiones, planifica recursos y traduce subtítulos con tu plan de ChatGPT. También crea miniaturas e imágenes con tu estilo, así necesitas una clave menos.",
+      "pt": "O Codex escreve guiões, planeia recursos e traduz legendas com o teu plano ChatGPT. Também cria miniaturas e imagens no teu estilo, por isso precisas de uma chave a menos."
+    }
+  }
 }
