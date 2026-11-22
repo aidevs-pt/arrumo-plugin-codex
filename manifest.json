@@ -30,7 +30,7 @@
         "args": [
           "exec",
           "--ignore-rules",
-          "--ephemeral",
+          "{ephemeral}",
           "--skip-git-repo-check",
           "--sandbox",
           "read-only",
@@ -98,6 +98,35 @@
         ],
         "result": {
           "source": "outputFile"
+        },
+        "ephemeralArgs": [
+          "--ephemeral"
+        ],
+        "resume": {
+          "args": [
+            "exec",
+            "resume",
+            "--ignore-rules",
+            "--skip-git-repo-check",
+            "-c",
+            "sandbox_mode=\"read-only\"",
+            "--disable",
+            "shell_tool",
+            "-c",
+            "model_reasoning_summary=\"auto\"",
+            "{settings}",
+            "{images}",
+            "--output-schema",
+            "{schemaPath}",
+            "--output-last-message",
+            "{outputPath}",
+            "{session}",
+            "-"
+          ],
+          "session": {
+            "stream": "stderr",
+            "pattern": "^session id: ([0-9A-Za-z-]+)$"
+          }
         }
       },
       "imageRun": {

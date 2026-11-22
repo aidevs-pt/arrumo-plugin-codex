@@ -23,3 +23,7 @@ Consulta [la traducción de subtítulos](../../README.md#translate-subtitles) pa
 ## Crea imágenes
 
 Codex puede crear miniaturas y otras imágenes con su herramienta de imágenes integrada, con tu plan de ChatGPT, así que no necesitas una clave de OpenAI o Gemini para ellas. Aparece en **Generación de imágenes**, en Ajustes, Servicios y claves, en primer lugar de forma predeterminada; bájalo para preferir un proveedor con clave. Arrumo envía la descripción de la imagen y hasta ocho referencias de estilo. Codex trabaja en solo lectura, y Arrumo recoge, comprueba y recorta la imagen, y después borra la copia de Codex.
+
+## Preguntas de seguimiento
+
+Cuando Codex pide a Arrumo material del espacio de trabajo, como el guion de un vídeo anterior, Arrumo responde en la misma sesión de Codex solo con ese material, así el encargo no se envía ni se paga dos veces. Estas sesiones quedan en el historial de Codex (`codex resume`); las ejecuciones puntuales no guardan ninguna.

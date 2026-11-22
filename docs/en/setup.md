@@ -23,3 +23,7 @@ See [Translate subtitles](../../README.md#translate-subtitles) to use this plugi
 ## Make images
 
 Codex can make thumbnails and other images with its built-in image tool, on your ChatGPT plan, so you do not need an OpenAI or Gemini key for them. It appears under **Image generation** in Settings, Services and keys, first by default; move it down to prefer a keyed provider. Arrumo sends the image brief and up to eight style references. Codex stays read-only, and Arrumo collects, checks and crops the image, then removes Codex's copy.
+
+## Follow-up questions
+
+When Codex asks Arrumo for workspace material, such as an earlier video's script, Arrumo answers in the same Codex session with only that material, so the brief is not sent and paid for twice. These sessions are kept in Codex's own history (`codex resume`); one-off runs keep none.
