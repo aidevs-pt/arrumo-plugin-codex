@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 8,
+  "schemaVersion": 11,
   "id": "codex",
   "name": "Codex",
   "description": "Uses your ChatGPT plan. Codex can also generate images, so you need one key fewer.",
@@ -157,6 +157,43 @@
           "fallback": ".codex",
           "path": "generated_images/{session}"
         }
+      },
+      "usageRun": {
+        "args": [
+          "app-server"
+        ],
+        "input": [
+          {
+            "id": 1,
+            "method": "initialize",
+            "params": {
+              "clientInfo": {
+                "name": "arrumo",
+                "version": "1"
+              }
+            }
+          },
+          {
+            "method": "initialized"
+          },
+          {
+            "id": 2,
+            "method": "account/rateLimits/read"
+          }
+        ],
+        "responseId": 2,
+        "windows": [
+          {
+            "usedPercent": "/result/rateLimits/primary/usedPercent",
+            "resetsAt": "/result/rateLimits/primary/resetsAt",
+            "minutes": "/result/rateLimits/primary/windowDurationMins"
+          },
+          {
+            "usedPercent": "/result/rateLimits/secondary/usedPercent",
+            "resetsAt": "/result/rateLimits/secondary/resetsAt",
+            "minutes": "/result/rateLimits/secondary/windowDurationMins"
+          }
+        ]
       }
     }
   },

@@ -21,3 +21,11 @@ The adapter runs `codex exec` in a temporary directory with a structured
 output schema. It uses a read-only sandbox, disables the shell, plugins and
 web search, and skips user configuration while retaining Codex authentication.
 The adapter validates cue coverage before returning the translated text.
+
+## Plan usage
+
+The manifest's `usageRun` (schema 11) starts `codex app-server` and asks
+`account/rateLimits/read`, which reports how much of each ChatGPT plan window is
+used without spending it. Arrumo shows the most used window, such as the weekly
+limit, in Settings › Services and keys and warns at 20% and 10% left.
+
