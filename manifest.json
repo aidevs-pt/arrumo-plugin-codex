@@ -126,6 +126,12 @@
           "session": {
             "stream": "stderr",
             "pattern": "^session id: ([0-9A-Za-z-]+)$"
+          },
+          "cleanup": {
+            "homeEnv": "CODEX_HOME",
+            "home": ".codex",
+            "directory": "sessions",
+            "fileSuffix": "{session}.jsonl"
           }
         }
       },
