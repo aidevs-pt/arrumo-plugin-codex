@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 11,
+  "schemaVersion": 14,
   "id": "codex",
   "name": "Codex",
   "description": "Uses your ChatGPT plan. Codex can also generate images, so you need one key fewer.",
@@ -32,10 +32,6 @@
           "--ignore-rules",
           "{ephemeral}",
           "--skip-git-repo-check",
-          "--sandbox",
-          "read-only",
-          "--disable",
-          "shell_tool",
           "-c",
           "model_reasoning_summary=\"auto\"",
           "{settings}",
@@ -47,6 +43,19 @@
           "-"
         ],
         "settingArgs": [
+          {
+            "setting": "local-tools",
+            "args": [
+              "-c",
+              "sandbox_mode=\"workspace-write\""
+            ],
+            "otherwise": [
+              "-c",
+              "sandbox_mode=\"read-only\"",
+              "--disable",
+              "shell_tool"
+            ]
+          },
           {
             "setting": "web-search",
             "args": [
@@ -79,9 +88,11 @@
               "--ignore-user-config",
               "--disable",
               "plugins"
-            ]
+            ],
+            "unless": "local-tools"
           }
         ],
+        "workFolderSetting": "local-tools",
         "imageArgs": [
           "-i",
           "{imagePath}"
@@ -108,10 +119,6 @@
             "resume",
             "--ignore-rules",
             "--skip-git-repo-check",
-            "-c",
-            "sandbox_mode=\"read-only\"",
-            "--disable",
-            "shell_tool",
             "-c",
             "model_reasoning_summary=\"auto\"",
             "{settings}",
@@ -199,9 +206,19 @@
   },
   "settings": [
     {
+      "id": "local-tools",
+      "label": "Write files and run commands",
+      "description": "Lets the agent write its own scripts and files, run commands, and use your installed plugins, tool servers and hooks while it works on a video. Its files stay in a work folder for that video until the video is finished.",
+      "kind": "boolean",
+      "scope": "workspace",
+      "required": false,
+      "default": true,
+      "warning": "The agent can then change files on your computer and run programs with your account's access. Keep this on only with an agent and plugins you trust."
+    },
+    {
       "id": "web-search",
       "label": "Web search",
-      "description": "Lets the agent search the web while it works, for facts, prices and trends. It stays read-only and cannot run commands.",
+      "description": "Lets the agent search the web while it works, for facts, prices and trends.",
       "kind": "boolean",
       "scope": "workspace",
       "required": false,
@@ -238,7 +255,8 @@
       "kind": "boolean",
       "scope": "workspace",
       "required": false,
-      "default": false
+      "default": false,
+      "hiddenWhen": "local-tools"
     }
   ],
   "introduction": {
@@ -288,7 +306,7 @@
       "settings": {
         "web-search": {
           "label": "Búsqueda web",
-          "description": "Permite que el agente busque en la web mientras trabaja: datos, precios y tendencias. Sigue en solo lectura y no puede ejecutar comandos."
+          "description": "Permite que el agente busque en la web mientras trabaja: datos, precios y tendencias."
         },
         "model": {
           "label": "Modelo",
@@ -308,6 +326,11 @@
         "installed-plugins": {
           "label": "Usar mis complementos instalados",
           "description": "Permite que el agente use tu propia configuración de Codex, sus complementos y servidores de herramientas. Pueden ver el material que recibe el agente, así que actívalo solo si confías en ellos."
+        },
+        "local-tools": {
+          "label": "Escribir archivos y ejecutar comandos",
+          "description": "Permite que el agente escriba sus propios scripts y archivos, ejecute comandos y use tus complementos, servidores de herramientas y hooks mientras trabaja en un vídeo. Sus archivos se guardan en una carpeta de trabajo de ese vídeo hasta que termina.",
+          "warning": "Así, el agente puede cambiar archivos de tu equipo y ejecutar programas con los permisos de tu cuenta. Déjalo activado solo con un agente y complementos de confianza."
         }
       },
       "iconNotice": "Codex, OpenAI y el logotipo de OpenAI son marcas de OpenAI."
@@ -331,7 +354,7 @@
       "settings": {
         "web-search": {
           "label": "Pesquisa na web",
-          "description": "Deixa o agente pesquisar na web enquanto trabalha: factos, preços e tendências. Continua só em leitura e não pode executar comandos."
+          "description": "Deixa o agente pesquisar na web enquanto trabalha: factos, preços e tendências."
         },
         "model": {
           "label": "Modelo",
@@ -351,6 +374,11 @@
         "installed-plugins": {
           "label": "Usar os meus plugins instalados",
           "description": "Deixa o agente usar a tua própria configuração do Codex, os seus plugins e servidores de ferramentas. Podem ver o material que o agente recebe, por isso ativa só se confiares neles."
+        },
+        "local-tools": {
+          "label": "Escrever ficheiros e executar comandos",
+          "description": "Deixa o agente escrever os seus próprios scripts e ficheiros, executar comandos e usar os teus plugins, servidores de ferramentas e hooks enquanto trabalha num vídeo. Os ficheiros ficam numa pasta de trabalho desse vídeo até ele estar concluído.",
+          "warning": "Assim, o agente pode alterar ficheiros do teu computador e executar programas com as permissões da tua conta. Mantém isto ativo só com um agente e plugins em que confias."
         }
       },
       "iconNotice": "Codex, OpenAI e o logótipo da OpenAI são marcas da OpenAI."
