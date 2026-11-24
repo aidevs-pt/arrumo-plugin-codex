@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 14,
+  "schemaVersion": 15,
   "id": "codex",
   "name": "Codex",
   "description": "Uses your ChatGPT plan. Codex can also generate images, so you need one key fewer.",
@@ -230,7 +230,13 @@
       "description": "The Codex model for this workspace's agent work. Leave empty to use Codex's default.",
       "kind": "string",
       "scope": "workspace",
-      "required": false
+      "required": false,
+      "suggestions": [
+        "gpt-6.2-astra",
+        "gpt-6.2-sol",
+        "gpt-6.1-sol",
+        "gpt-6.1-terra"
+      ]
     },
     {
       "id": "reasoning-effort",
@@ -284,6 +290,14 @@
             "high": "High",
             "xhigh": "Extra high"
           }
+        },
+        "model": {
+          "choices": {
+            "gpt-6.2-astra": "GPT-6.2 Astra: demanding projects",
+            "gpt-6.2-sol": "GPT-6.2 Sol: everyday tasks",
+            "gpt-6.1-sol": "GPT-6.1 Sol: long work at lower cost",
+            "gpt-6.1-terra": "GPT-6.1 Terra: fast and efficient"
+          }
         }
       }
     },
@@ -310,7 +324,13 @@
         },
         "model": {
           "label": "Modelo",
-          "description": "El modelo de Codex para el trabajo del agente en este espacio. Déjalo vacío para usar el predeterminado de Codex."
+          "description": "El modelo de Codex para el trabajo del agente en este espacio. Déjalo vacío para usar el predeterminado de Codex.",
+          "choices": {
+            "gpt-6.2-astra": "GPT-6.2 Astra: proyectos exigentes",
+            "gpt-6.2-sol": "GPT-6.2 Sol: tareas diarias",
+            "gpt-6.1-sol": "GPT-6.1 Sol: trabajo largo más barato",
+            "gpt-6.1-terra": "GPT-6.1 Terra: rápido y eficiente"
+          }
         },
         "reasoning-effort": {
           "label": "Esfuerzo de razonamiento",
@@ -358,7 +378,13 @@
         },
         "model": {
           "label": "Modelo",
-          "description": "O modelo Codex para o trabalho do agente neste espaço. Deixa vazio para usar o predefinido do Codex."
+          "description": "O modelo Codex para o trabalho do agente neste espaço. Deixa vazio para usar o predefinido do Codex.",
+          "choices": {
+            "gpt-6.2-astra": "GPT-6.2 Astra: projetos exigentes",
+            "gpt-6.2-sol": "GPT-6.2 Sol: tarefas diárias",
+            "gpt-6.1-sol": "GPT-6.1 Sol: trabalho longo mais barato",
+            "gpt-6.1-terra": "GPT-6.1 Terra: rápido e eficiente"
+          }
         },
         "reasoning-effort": {
           "label": "Esforço de raciocínio",
