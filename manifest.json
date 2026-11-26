@@ -19,7 +19,7 @@
   },
   "agentProvider": {
     "label": "Codex",
-    "setupUrl": "https://learn.chatgpt.com/docs/codex/cli",
+    "setupUrl": "https://www.aidevs.pt/tools/arrumo/docs/plugins/codex/setup",
     "cli": {
       "executable": "codex",
       "authStatusArgs": [
