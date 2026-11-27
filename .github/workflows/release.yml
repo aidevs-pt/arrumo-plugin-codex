@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           repository: aidevs-pt/arrumo-plugin-sdk
-          ref: 0c16cb10c6defec1c73be9ad883e6279ccdb0a7a
+          ref: bccb27669581ddbfe8ad460fdd397995182953cf
           path: plugin-sdk
           token: ${{ secrets.ARRUMO_REPOS_TOKEN || github.token }}
           persist-credentials: false
