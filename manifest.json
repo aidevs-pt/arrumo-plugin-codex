@@ -88,8 +88,7 @@
               "--ignore-user-config",
               "--disable",
               "plugins"
-            ],
-            "unless": "local-tools"
+            ]
           }
         ],
         "workFolderSetting": "local-tools",
@@ -208,7 +207,7 @@
     {
       "id": "local-tools",
       "label": "Write files and run commands",
-      "description": "Lets the agent write its own scripts and files, run commands, and use your installed plugins, tool servers and hooks while it works on a video. Its files stay in a work folder for that video until the video is finished.",
+      "description": "Lets the agent write its own scripts and files and run commands while it works on a video. Its files stay in a work folder for that video until the video is finished.",
       "kind": "boolean",
       "scope": "workspace",
       "required": false,
@@ -257,12 +256,11 @@
     {
       "id": "installed-plugins",
       "label": "Use my installed plugins",
-      "description": "Lets the agent use your own Codex configuration, plugins and tool servers. They can see the workspace material the agent is given, so turn this on only for ones you trust.",
+      "description": "Lets the agent use your own Codex setup: its configuration, plugins, tool servers (MCP) and hooks. They can see the workspace material the agent is given, so turn this on only for ones you trust.",
       "kind": "boolean",
       "scope": "workspace",
       "required": false,
-      "default": false,
-      "hiddenWhen": "local-tools"
+      "default": false
     }
   ],
   "introduction": {
@@ -345,11 +343,11 @@
         },
         "installed-plugins": {
           "label": "Usar mis complementos instalados",
-          "description": "Permite que el agente use tu propia configuración de Codex, sus complementos y servidores de herramientas. Pueden ver el material que recibe el agente, así que actívalo solo si confías en ellos."
+          "description": "Permite que el agente use tu propia configuración de Codex: sus ajustes, complementos, servidores de herramientas (MCP) y hooks. Pueden ver el material que recibe el agente, así que actívalo solo si confías en ellos."
         },
         "local-tools": {
           "label": "Escribir archivos y ejecutar comandos",
-          "description": "Permite que el agente escriba sus propios scripts y archivos, ejecute comandos y use tus complementos, servidores de herramientas y hooks mientras trabaja en un vídeo. Sus archivos se guardan en una carpeta de trabajo de ese vídeo hasta que termina.",
+          "description": "Permite que el agente escriba sus propios scripts y archivos y ejecute comandos mientras trabaja en un vídeo. Sus archivos se guardan en una carpeta de trabajo de ese vídeo hasta que termina.",
           "warning": "Así, el agente puede cambiar archivos de tu equipo y ejecutar programas con los permisos de tu cuenta. Déjalo activado solo con un agente y complementos de confianza."
         }
       },
@@ -399,11 +397,11 @@
         },
         "installed-plugins": {
           "label": "Usar os meus plugins instalados",
-          "description": "Deixa o agente usar a tua própria configuração do Codex, os seus plugins e servidores de ferramentas. Podem ver o material que o agente recebe, por isso ativa só se confiares neles."
+          "description": "Deixa o agente usar a tua própria configuração do Codex: as definições, plugins, servidores de ferramentas (MCP) e hooks. Podem ver o material que o agente recebe, por isso ativa só se confiares neles."
         },
         "local-tools": {
           "label": "Escrever ficheiros e executar comandos",
-          "description": "Deixa o agente escrever os seus próprios scripts e ficheiros, executar comandos e usar os teus plugins, servidores de ferramentas e hooks enquanto trabalha num vídeo. Os ficheiros ficam numa pasta de trabalho desse vídeo até ele estar concluído.",
+          "description": "Deixa o agente escrever os seus próprios scripts e ficheiros e executar comandos enquanto trabalha num vídeo. Os ficheiros ficam numa pasta de trabalho desse vídeo até ele estar concluído.",
           "warning": "Assim, o agente pode alterar ficheiros do teu computador e executar programas com as permissões da tua conta. Mantém isto ativo só com um agente e plugins em que confias."
         }
       },
